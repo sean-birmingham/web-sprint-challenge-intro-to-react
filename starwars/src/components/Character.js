@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { CharacterCard } from './CharacterStyles';
 
 const Character = (props) => {
   const { character } = props;
   return (
-    <div>
-      <h1>{character.name}</h1>
-    </div>
+    <Fragment>
+      <CharacterCard>
+        <h2>{character.name}</h2>
+        <p>{character.birth_year}</p>
+      </CharacterCard>
+    </Fragment>
   );
 };
 
